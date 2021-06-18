@@ -4,10 +4,14 @@
 
 #### Download the repository and follow the below command
 
-`npm install`
+```sh
+    npm install
+```
 
 #### Your node modules should be installed then run the below one
 
-`npm start`
+```sh
+    npm start
+```
 
 ### Your app should be running on `localhost:5000`

@@ -1,6 +1,6 @@
 {
   "name": "school-management-system",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A partial school management system for high school",
   "main": "main.js",
   "scripts": {

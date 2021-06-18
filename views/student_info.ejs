@@ -1,0 +1,93 @@
+<%- include("./partials/header") -%>
+
+<title>Student's Information</title>
+<div class="container mt-2">
+    <div class="row">
+      <%- include("./partials/flash_message") -%> 
+        <div class="col-md-3 col-12">
+            <!-- student image and functional buttons -->
+            <img
+              src="<%= student.image %>"
+              class="rounded mb-3 border"
+              width="100%"
+              alt="<%= student.students_name %>" 
+            />
+            <div class="btn-group d-flex justify-space-around" role="group" aria-label="Basic outlined example">
+              <% if(student._id){ %>
+                <form action="/student/edit" method="POST">
+                  <input type="hidden" name="id" value="<%= student._id %>">
+                  <button type="submit" class="btn btn-outline-primary mr-1">Edit</button>
+                </form>
+              <% } %>  
+              <% if(!score){ %>
+                <form action="/student/resultEntry" method="POST">
+                  <input type="hidden" name="id" value="<%= student.students_id %>">
+                  <button type="submit" class="btn btn-outline-primary mr-1">Insert Scores</button>
+                </form>
+              <% } else { %>
+                <form action="/student/result" method="POST">
+                  <input type="hidden" name="id" value="<%= student.students_id %>">
+                  <input type="hidden" name="Class" value="<%= student.Class %>">
+                  <button type="submit" class="btn btn-outline-primary mr-1">Result</button>
+                </form>
+              <% } %>   
+            </div>
+          </div>
+
+          <!-- student's details -->
+          <div class="col-md-9 col-12">
+              <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between">
+                       <span>ID:</span>
+                      <span><%= student.students_id %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Name:
+                      </span>
+                      <span><%= student.students_name %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Class:
+                      </span>
+                      <span><%= student.Class %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Section:</span>
+                      <span><%= student.section %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Session:</span>
+                      <span><%= student.session %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Admission Date:</span>
+                      <span><%= student.admission_date %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Father's Name:</span>
+                      <span><%= student.father_name %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Mother's Name:
+                      </span>
+                      <span><%= student.mother_name %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Date of Birth:</span>
+                      <span><%= student.dateOfBirth %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Contact Number:
+                      </span>
+                      <span><%= student.contact_number %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Contact Relation:</span>
+                      <span><%= student.contact_rel %></span>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer") -%>

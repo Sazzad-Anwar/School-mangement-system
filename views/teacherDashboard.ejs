@@ -1,0 +1,116 @@
+<%- include("./partials/header") -%>
+
+<title>Student's Information</title>
+<div class="container mt-3">
+    <%- include("./partials/flash_message") -%>
+    <div class="row">
+        <div class="col-md-4 col-12">
+            <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Get Information of A Student</h5>
+                  <form action='/student/info' method="POST">
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Student ID</label>
+                        <input type="number" name="id" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Check</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-12">
+            <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Check A Student's Result</h5>
+                  <form action='/student/result' method="POST">
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Student ID</label>
+                        <input type="number" name="id" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Check</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-12">
+            <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Entry A Student's Score</h5>
+                  <form action='/student/resultEntry' method="POST">
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Student ID</label>
+                        <input type="number" name="id" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Check</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-12">
+            <div class="card shadow-lg mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Get Class Details</h5>
+                    <form action="/student/classInfo" method="POST">
+                        <select class="form-select mb-3" name="Class" required>
+                            <option selected>Class</option>
+                            <option value="Play">Play</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="Intermediate first year">Intermediate First Year</option>
+                            <option value="Intermediate second year">Intermediate Second Year</option>
+                          </select>
+              
+                          <select class="form-select mb-3" name="section">
+                            <option selected>Section</option>
+                            <option value="N/A">N/A</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                          </select>
+              
+                          <select name="session" class="form-select mb-3" required>
+                            <option selected>Year</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                          </select>
+
+                          <button type="submit" class="btn btn-primary mt-3 btn-block">Check</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%- include("./partials/footer") -%>

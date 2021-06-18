@@ -1,0 +1,445 @@
+<%- include("./partials/header") -%>
+
+<title>
+    Result Edit
+</title>
+
+<div class="container mt-3">
+    <h3>Edit Or Update the exam's score</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td><%= student.students_name %></td>
+                                <td>Student ID:
+                                    <%= student.students_id %>
+                                </td>
+                                <td>Class:
+                                    <%= student.Class %>
+                                </td>
+                                <td>Section:
+                                    <%= student.section %>
+                                </td>
+                                
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+                <td>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <form action="/student/info" method="post">
+                                        <input type="hidden" name="id" value="<%= student.students_id%>">
+                                        <button class="btn btn-primary btn-block" type="submit">Details</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/student/result" method="post">
+                                        <input type="hidden" name="id" value="<%= student.students_id%>">
+                                        <button class="btn btn-primary btn-block" type="submit">Result</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table table-bordered table-hover">
+
+                        <tbody>
+                            <tr>
+                                <th>Subject Name</th>
+                                <th colspan="2">1<sup>st</sup>
+                                    Semester</th>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <form action="/student/nurseryFirstSemEdit" method="POST">
+                                <input type="hidden" name="id" value="<%= score.students_id %>">
+                                <tr>
+                                    <td>Bangla</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.bangla.firstSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="bangla_firstSem"
+                                            class="form-control"
+                                            placeholder="Bangla"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>English</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.english.firstSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="english_firstSem"
+                                            class="form-control"
+                                            placeholder="English"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Math</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.math.firstSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="math_firstSem"
+                                            class="form-control"
+                                            placeholder="Math"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Religion</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.religion.firstSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="religion_firstSem"
+                                            class="form-control"
+                                            placeholder="Religion"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>General Knowldge</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.general_knowledge.firstSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="general_knowledge_firstSem"
+                                            class="form-control"
+                                            placeholder="General Knowldge"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Drawing</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.drawing.firstSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="drawing_firstSem"
+                                            class="form-control"
+                                            placeholder="Drawing"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-block" type="submit">
+                                            Update
+                                        </button>
+                                    </td>
+                                </tr>
+                            </form>
+                        </tbody>
+                    </table>
+                </td>
+
+                <td>
+                    <table class="table table-bordered table-hover">
+
+                        <tbody>
+                            <tr>
+                                <th>Subject Name</th>
+                                <th colspan="2">2<sup>nd</sup>
+                                    Semester</th>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <form action="/student/nurserySecondSemEdit" method="post">
+                                <input type="hidden" name="id" value="<%= score.students_id %>">
+                                <tr>
+                                    <td>Bangla</td>
+                                    <!-- Second semester -->
+                                    <td>
+                                        <%= score.bangla.secondSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="bangla_secondSem"
+                                            class="form-control"
+                                            placeholder="Bangla"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>English</td>
+                                    <!-- Second semester -->
+                                    <td>
+                                        <%= score.english.secondSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="english_secondSem"
+                                            class="form-control"
+                                            placeholder="English"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Math</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.math.secondSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="math_secondSem"
+                                            class="form-control"
+                                            placeholder="Math"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Religion</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.religion.secondSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="religion_secondSem"
+                                            class="form-control"
+                                            placeholder="Religion"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>General Knowldge</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.general_knowledge.secondSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="general_knowledge_secondSem"
+                                            class="form-control"
+                                            placeholder="General Knowldge"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Drawing</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.drawing.secondSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="drawing_secondSem"
+                                            class="form-control"
+                                            placeholder="Drawing"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-block" type="submit">
+                                            Update
+                                        </button>
+                                    </td>
+                                </tr>
+                            </form>
+                        </tbody>
+                    </table>
+                </td>
+
+                <td>
+                    <table class="table table-bordered table-hover">
+
+                        <tbody>
+                            <tr>
+                                <th>Subject Name</th>
+                                <th colspan="2">3<sup>rd</sup>
+                                    Semester</th>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <form action="/student/nurseryThirdSemEdit" method="post">
+                                <input type="hidden" name="id" value="<%= score.students_id %>">
+                                <tr>
+                                    <td>Bangla</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.bangla.thirdSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="bangla_thirdSem"
+                                            class="form-control"
+                                            placeholder="Bangla"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>English</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.english.thirdSem ?? 'Null'%>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="math_thirdSem"
+                                            class="form-control"
+                                            placeholder="Math"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Math</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.math.thirdSem ?? 'Null'%>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="english_thirdSem"
+                                            class="form-control"
+                                            placeholder="English"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Religion</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.religion.thirdSem ?? 'Null'%>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="religion_thirdSem"
+                                            class="form-control"
+                                            placeholder="Religion"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>General Knowldge</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.general_knowledge.thirdSem ?? 'Null'%>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="general_knowledge_thirdSem"
+                                            class="form-control"
+                                            placeholder="General Knowldge"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Drawing</td>
+                                    <!-- first semester -->
+                                    <td>
+                                        <%= score.drawing.thirdSem ?? 'Null' %>
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            name="drawing_thirdSem"
+                                            class="form-control"
+                                            placeholder="Drawing"
+                                            required/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-block" type="submit">
+                                            Update
+                                        </button>
+                                    </td>
+                                </tr>
+                            </form>
+                        </tbody>
+                    </table>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<%- include("./partials/footer") -%>

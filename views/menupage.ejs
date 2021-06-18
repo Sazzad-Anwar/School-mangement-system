@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Pridi|Sigmar+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="gradient-color">
+  <nav class="navbar gradient-color-65 navbar-expand-lg navbar-dark bg-light">
+    <a class="navbar-brand" style="position: relative;left: 38%;" href="#">Score Management system</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+<%- include("./partials/flash_message") -%>
+
+<div class="container-fluid" style="min-height: 80vh;">
+    <div class="text-center pt-5">
+        <h1>
+            Authorized Login
+        </h1>
+    </div>
+    <form action="/" method="post">
+        <div class="form-row pt-5 mt-5">
+            <div class="col-xl-5 col-lg-5 col-sm-5 col-md-5"></div>
+            <div class="col-xl-2 col-lg-2 col-sm-2 col-md-2">
+                <input type="text" name="students_id" required placeholder="Admin ID" class="form-control">
+            </div>
+            <div class="col-xl-5 col-lg-5 col-sm-5 col-md-5"></div>
+        </div>
+        <div class="form-row pt-2">
+            <div class="col-xl-5 col-lg-5 col-sm-5 col-md-5"></div>
+            <div class="col-xl-2 col-lg-2 col-sm-2 col-md-2">
+                <input type="password" name="password" required placeholder="Admin Password" class="form-control">
+            </div>
+            <div class="col-xl-5 col-lg-5 col-sm-5 col-md-5"></div>
+        </div>
+        <div class="form-row pt-2">
+            <div class="col-xl-5 col-lg-5 col-sm-5 col-md-5"></div>
+            <div class="col-xl-2 col-lg-2 col-sm-2 col-md-2">
+                <input type="submit" class="form-control btn btn-secondary btn-block font-weight-bolder">
+            </div>
+            <div class="col-xl-5 col-lg-5 col-sm-5 col-md-5"></div>
+        </div>
+    </form>
+</div>
+
+<%- include("./partials/footer") -%>

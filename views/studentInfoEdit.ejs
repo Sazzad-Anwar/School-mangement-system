@@ -1,0 +1,261 @@
+<% if(student.role === 'student'){ %>
+    <%- include("./partials/studentHeader") -%>
+<% }else{ %>
+    <%- include("./partials/header") -%>
+<% } %>
+
+<title>Student's Information</title>
+
+<div class="container mt-3">
+    <%- include("./partials/flash_message") -%>
+    <h3>Student's Details Edit</h3>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td class="w-25">Name</td>
+                <td class="w-25"><%= student.students_name %></td>
+                <form action="/student/name" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control input"
+                            placeholder="Change Name"
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">ID</td>
+                <td class="w-25"><%= student.students_id %></td>
+                <form action="name" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control input"
+                            placeholder="Student Id can not be changed"
+                            disabled
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" disabled class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Class</td>
+                <td class="w-25"><%= student.Class %></td>
+                <form action="/student/Class" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <select class="form-select mb-3" name="Class" required>
+                            <option selected>Select</option>
+                            <option value="Play">Play</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="Intermediate first year">Intermediate First Year
+                            </option>
+                            <option value="Intermediate second year">Intermediate Second Year
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Section</td>
+                <td class="w-25"><%= student.section %></td>
+                <form action="/student/section" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <select class="form-select mb-3" name="section" required>
+                            <option selected>Select</option>
+                            <option value="N/A">N/A</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Session</td>
+                <td class="w-25"><%= student.session %></td>
+                <form action="name" method="post">
+                    <td class="w-25">
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control input"
+                            placeholder="Session can not be changed"
+                            disabled
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" disabled class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Admission Date</td>
+                <td class="w-25"><%=new Date(student.admission_date).toLocaleDateString('en-GB') %></td>
+                <form action="name" method="post">
+                    <td class="w-25">
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control input"
+                            placeholder="Can not be changed"
+                            disabled
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" disabled class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Father's Name</td>
+                <td class="w-25"><%= student.father_name %></td>
+                <form action="/student/father_name" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <input
+                            type="text"
+                            name="father"
+                            class="form-control input"
+                            placeholder="Change Father's Name"
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Mother's Name</td>
+                <td class="w-25"><%= student.mother_name %></td>
+                <form action="/student/mother_name" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <input
+                            type="text"
+                            name="mother"
+                            class="form-control input"
+                            placeholder="Change Mother's Name"
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Date of Birth</td>
+                <td class="w-25"><%= new Date(student.dateOfBirth).toLocaleDateString('en-GB') %></td>
+                <form action="/student/dateOfBirth" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <input
+                            type="date"
+                            name="dateOfBirth"
+                            class="form-control"
+                            placeholder="Change Mother's Name"
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            
+            <tr>
+                <td class="w-25">Contact Number</td>
+                <td class="w-25"><%= student.contact_number %></td>
+                <form action="/student/contact_number" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <input
+                            type="tel"
+                            name="contact_number"
+                            class="form-control"
+                            placeholder="Change Contact Number"
+                            required
+                        />
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td class="w-25">Contact Relation</td>
+                <td class="w-25"><%= student.contact_rel %></td>
+                <form action="/student/contact_rel" method="post">
+                    <td class="w-25">
+                        <input type="hidden" name="id" value="<%= student._id %>">
+                        <select class="form-select mb-3" name="contact_rel" required>
+                            <option selected>Select</option>
+                            <option value="Mother" class="option">Mother</option>
+                            <option value="Father">Father</option>
+                            <option value="Ownself">Ownself</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary w-50 float-right">Save</button>
+                    </td>
+                </form>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<%- include("./partials/footer") -%>

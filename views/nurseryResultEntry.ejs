@@ -1,0 +1,226 @@
+<%- include("./partials/header") -%>
+<title>Result Entry</title>
+
+<div class="container  mt-3">
+    <%- include("./partials/flash_message") -%>
+    <h3>Student's Score Insert</h3>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td><%= student.students_name %></td>
+                <td>Student ID:
+                    <%= student.students_id %>
+                </td>
+                <td>Class
+                    <%= student.Class %>
+                </td>
+                <td>Section:
+                    <%= student.section %>
+                </td>
+            </tr>
+            <tr>
+                <th>Subject Name</th>
+                <th>First Semester</th>
+                <th>Second Semester</th>
+                <th>Final Semester</th>
+            </tr>
+            <form action="/student/nursery" method="POST">
+                <tr>
+                    <td>Bangla</td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="bangla_firstSem"
+                            class="form-control"
+                            placeholder="Bangla" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="bangla_secondSem"
+                            class="form-control"
+                            placeholder="Bangla" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="bangla_thirdSem"
+                            class="form-control"
+                            placeholder="Bangla" 
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="english_firstSem"
+                            class="form-control"
+                            placeholder="English"  
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="english_secondSem"
+                            class="form-control"
+                            placeholder="English" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="english_thirdSem"
+                            class="form-control"
+                            placeholder="English" 
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Math</td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="math_firstSem"
+                            class="form-control"
+                            placeholder="Math"  
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="math_secondSem"
+                            class="form-control"
+                            placeholder="Math" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="math_thirdSem"
+                            class="form-control"
+                            placeholder="Math" 
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Religion</td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="religion_firstSem"
+                            class="form-control"
+                            placeholder="Religion"  
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="religion_secondSem"
+                            class="form-control"
+                            placeholder="Religion" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="religion_thirdSem"
+                            class="form-control"
+                            placeholder="Religion" 
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>General Knowldge</td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="general_knowledge_firstSem"
+                            class="form-control"
+                            placeholder="General Knowldge"  
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="general_knowledge_secondSem"
+                            class="form-control"
+                            placeholder="General Knowldge" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="general_knowledge_thirdSem"
+                            class="form-control"
+                            placeholder="General Knowldge" 
+                        />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Drawing</td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="drawing_firstSem"
+                            class="form-control"
+                            placeholder="Drawing"  
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="drawing_secondSem"
+                            class="form-control"
+                            placeholder="Drawing" 
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="number"
+                            min="1"
+                            name="drawing_thirdSem"
+                            class="form-control"
+                            placeholder="Drawing" 
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="hidden" name="students_id" value="<%= student.students_id %>" />
+                        <button type="submit" class="btn btn-primary w-50">Save</button>
+                    </td>
+                </tr>
+
+            </form>
+
+            </tbody>
+        </table>
+    </div>
+
+    <%- include("./partials/footer") -%>

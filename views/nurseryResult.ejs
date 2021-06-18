@@ -1,0 +1,336 @@
+<% if(studentRole == 'student'){ %>
+    <%- include("./partials/studentHeader") -%>
+<% }else{ %> 
+    <%- include("./partials/header") -%>
+<% } %> 
+<title>Result</title>
+<div class="container  mt-3">
+    <%- include("./partials/flash_message") -%>
+    <h3>Student's Score Grade</h3>
+    <table class="table table-bordered table-hover">
+        <tbody>
+            <tr>
+                <td><%= student.students_name %></td>
+                <td>Student ID:
+                    <%= student.students_id %>
+                </td>
+                <td>Class: 
+                    <%= student.Class %>
+                </td>
+                <td>Section:
+                    <%= student.section %>
+                </td>
+            </tr>
+            <tr>
+                <th>Subject Name</th>
+                <th>1<sup>st</sup> Semester</th>
+                <th>Grade</th>
+                <th>GPA</th>
+                <th>2<sup>nd</sup> Semester</th>
+                <th>Grade</th>
+                <th>GPA</th>
+                <th>3<sup>rd</sup> Semester</th>
+                <th>Grade</th>
+                <th>GPA</th>
+            </tr>
+            <form action="/student/nursery" method="POST">
+                <tr>
+                    <td>Bangla</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= score.bangla.firstSem %>
+                    </td>
+                    <td>
+                        <%= b1stgpa %>
+                    </td>
+                    <td>
+                        <%= b1stgradePoint %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= score.bangla.secondSem %>
+                    </td>
+                    <td>
+                        <%= b2ndgpa %>
+                    </td>
+                    <td>
+                        <%= b2ndgradePoint %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= score.bangla.thirdSem %>
+                    </td>
+                    <td>
+                        <%= b3rdgpa %>
+                    </td>
+                    <td>
+                        <%= b3rdgradePoint %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= score.english.firstSem %>
+                    </td>
+                    <td>
+                        <%= e1stgpa %>
+                    </td>
+                    <td>
+                        <%= e1stgradePoint %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= score.english.secondSem %>
+                    </td>
+                    <td>
+                        <%= e2ndgpa %>
+                    </td>
+                    <td>
+                        <%= e2ndgradePoint %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= score.english.thirdSem %>
+                    </td>
+                    <td>
+                        <%= e3rdgpa %>
+                    </td>
+                    <td>
+                        <%= e3rdgradePoint %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Math</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= score.math.firstSem %>
+                    </td>
+                    <td>
+                        <%= m1stgpa %>
+                    </td>
+                    <td>
+                        <%= m1stgradePoint %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= score.math.secondSem %>
+                    </td>
+                    <td>
+                        <%= m2ndgpa %>
+                    </td>
+                    <td>
+                        <%= m2ndgradePoint %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= score.math.thirdSem %>
+                    </td>
+                    <td>
+                        <%= m3rdgpa %>
+                    </td>
+                    <td>
+                        <%= m3rdgradePoint %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Religion</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= score.religion.firstSem %>
+                    </td>
+                    <td>
+                        <%= r1stgpa %>
+                    </td>
+                    <td>
+                        <%= r1stgradePoint %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= score.religion.secondSem %>
+                    </td>
+                    <td>
+                        <%= r2ndgpa %>
+                    </td>
+                    <td>
+                        <%= r2ndgradePoint %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= score.religion.thirdSem %>
+                    </td>
+                    <td>
+                        <%= r3rdgpa %>
+                    </td>
+                    <td>
+                        <%= r3rdgradePoint %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>General Knowldge</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= score.general_knowledge.firstSem %>
+                    </td>
+                    <td>
+                        <%= g1stgpa %>
+                    </td>
+                    <td>
+                        <%= g1stgradePoint %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= score.general_knowledge.secondSem %>
+                    </td>
+                    <td>
+                        <%= g2ndgpa %>
+                    </td>
+                    <td>
+                        <%= g2ndgradePoint %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= score.general_knowledge.thirdSem %>
+                    </td>
+                    <td>
+                        <%= g3rdgpa %>
+                    </td>
+                    <td>
+                        <%= g3rdgradePoint %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Drawing</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= score.drawing.firstSem %>
+                    </td>
+                    <td>
+                        <%= d1stgpa %>
+                    </td>
+                    <td>
+                        <%= d1stgradePoint %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= score.drawing.secondSem %>
+                    </td>
+                    <td>
+                        <%= d2ndgpa %>
+                    </td>
+                    <td>
+                        <%= d2ndgradePoint %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= score.drawing.thirdSem %>
+                    </td>
+                    <td>
+                        <%= d3rdgpa %>
+                    </td>
+                    <td>
+                        <%= d3rdgradePoint %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Average Marks</td>
+                    <!-- first semester -->
+                    <td>
+                        <%= average %>
+                    </td>
+                    <td>
+                        <%= firstSemGrade %>
+                    </td>
+                    <td>
+                        <%= firstSemTotalGrade %>
+                    </td>
+
+                    <!-- Second semester -->
+                    <td>
+                        <%= secondSemAverage %>
+                    </td>
+                    <td>
+                        <%= secondSemGrade %>
+                    </td>
+                    <td>
+                        <%= secondSemTotalGrade %>
+                    </td>
+
+                    <!-- Final semester -->
+                    <td>
+                        <%= thirdSemAverage %>
+                    </td>
+                    <td>
+                        <%= thirdSemGrade %>
+                    </td>
+                    <td>
+                        <%= thirdSemTotalGrade %>
+                    </td>
+                </tr>
+
+            </form>
+            </tbody>
+            <table class="table table-bordered w-50 table-hover">
+                <h3>Total Marks</h3>
+                <tbody>
+                    <tr>
+                        <th>1<sup>st</sup> Semester</th>
+                        <th>2<sup>nd</sup> Semester</th>
+                        <th>3<sup>rd</sup> Semester</th>
+                    </tr>
+                    <tr>
+                        <td><%= totalFirstSem %></td>
+                        <td><%= totalSecondSem %></td>
+                        <td><%= totalThirdSem %></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <% if(totalFirstSem && totalSecondSem && totalThirdSem){ %>
+                <h3>Annula Result</h3>
+                <table class="table table-bordered w-50 table-hover">
+                    <tbody>
+                        <tr>
+                            <td>Total Annula Marks</td>
+                            <td><%= totalAverageMarks %></td>
+                        </tr>
+                        <tr>
+                            <td>Grade</td>
+                            <td><%= overAllGrade %></td>
+                        </tr>
+                        <tr>
+                            <td>GPA</td>
+                            <td><%= overAllTotalGrade %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <% } %> 
+
+            <% if(studentRole !== 'student'){ %>
+                <form action="/student/nurseryResultEdit" method="post">
+                    <input type="hidden" name="id" value="<%=student.students_id%>" />
+                    <button class="btn btn-primary" type="submit">Update Results</button>
+                </form>
+            <% } %> 
+        </table>
+    </div>
+
+<%- include("./partials/footer") -%>

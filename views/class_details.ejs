@@ -1,0 +1,76 @@
+<%- include("./partials/header") -%>
+
+<title>Student's Information</title>
+
+<div class="container">
+    <h1 class="my-4">Class Details</h1>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Class:
+                    <%= selectedClass %></td>
+                <td>Section:
+                    <%= selectedSection %></td>
+                <td></td>
+                <td>Session:
+                    <%= selectedSession %></td>
+                <td>Total Student
+                    <%= count %></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>No.</td>
+                <td>ID</td>
+                <td>Student Name</td>
+                <td>Date of Birth</td>
+                <td>Admission Date</td>
+                <td>Contact Number</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <% Class.forEach((Class,index) =>{%>
+                <tr>
+                    <td><%= index+1 %> </td>
+                    <td><%= Class.students_id %></td>
+                    <td><%= Class.students_name %></td>
+                    <td><%= Class.dateOfBirth %></td>
+                    <td><%= Class.admission_date %></td>
+                    <td><%= Class.contact_number %></td>
+                    <td>
+                        <form action="/student/info" method="POST">
+                            <input type="hidden" name="id" value="<%= Class.students_id %>">
+                            <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                <i class="far fa-edit"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/student/result" method="POST">
+                            <input type="hidden" name="id" value="<%= Class.students_id %>">
+                            <button type="submit" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Check Result">
+                                <i class="fas fa-clipboard-check"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- <form action="/student/delete?_method=DELETE" method="post">
+                            <input type="hidden" name="id" value="<%#= Class._id%>">
+                            <input type="hidden" name="students_id" value='<%#= Class.students_id%>'>
+                            <button type="submit" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form> -->
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include("./partials/footer") -%>

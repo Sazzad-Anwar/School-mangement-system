@@ -1,0 +1,91 @@
+<%- include("./partials/header") -%>
+
+<title>Teacher Registration</title>
+<div class="student_registration">
+    <h1 class="registration_heading font-weight-bolder pt-5">Teacher's Registration Form</h1>
+    <div class="container-fluid p-5">
+        <form action="/teacher_registrtaion" method="post">
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Teacher's Name:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="text" class="form-control input " name="teacher_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Teacher's ID:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="number" class="form-control input " name="teacher_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Teacher's Email:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="email" class="form-control input " name="teacher_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Teacher's Address:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="text" class="form-control input " name="teacher_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Phone Number:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="tel" class="form-control input " name="teacher_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Last Education Level:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <select name="education_level" class="input form-control mt-4 select" id="">
+                        <option value="undergraduate" class="option">Undergraduate</option>
+                        <option value="graduate" class="option">Graduate</option>
+                        <option value="postgraduate" class="option">Postgraduate</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="teacher's_name" class="label">Instituition's Name:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="text" class="form-control input " name="teacher_name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="contact_number" class="label">Teacher's Photo:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="file" class="form-control input" name="contact_number" id="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <label for="contact_number" class="label">ID's Photo:</label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <input type="file" class="form-control input" name="contact_number" id="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary btn-lg form-control submit-button">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("./partials/footer") -%>

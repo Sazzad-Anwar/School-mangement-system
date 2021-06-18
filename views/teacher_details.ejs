@@ -1,0 +1,47 @@
+<%- include("./partials/header") -%>
+
+<title>Teacher's Details</title>
+
+<div class="teacher_details">
+    <div class="container-fluid p-3">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                <form action="/student_details" method="get">
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-control input" placeholder="Teacher's Name" required>
+                        <input type="number" name="id" class="form-control input" placeholder="Teacher's ID" required>
+                        <button type="submit" class="btn btn-info form-control input mt-3">Check</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="container-fluid">
+                    <h1 class="font-weight-bolder font-family-pridi">Teacher's Photo: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Teacher's Name: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Teacher's ID: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Email: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Address: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Phone Number: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Education Level: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Instituition's Name: </h1>
+                    <h1 class="font-weight-bolder font-family-pridi">Photo of NID: </h1>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="container-fluid ">
+                    <h1 class="font-weight-normal font-family-pridi">  </h1>
+                    <h1 class="font-weight-normal font-family-pridi">  </h1>
+                    <h1 class="font-weight-normal font-family-pridi"> </h1>
+                    <h1 class="font-weight-normal font-family-pridi"> </h1>
+                    <h1 class="font-weight-normal font-family-pridi"> </h1>
+                    <h1 class="font-weight-normal font-family-pridi"> </h1>
+                    <h1 class="font-weight-normal font-family-pridi">  </h1>
+                    <h1 class="font-weight-normal font-family-pridi"> </h1>
+                    <h1 class="font-weight-normal font-family-pridi"> </h1>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+
+<%- include("./partials/footer") -%>
